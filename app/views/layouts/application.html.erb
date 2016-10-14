@@ -6,9 +6,22 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <script>
+      // $(document).ready(function() {
+      //     console.log( "ready!" );
+      //     ReactDOM.render(
+      //       <Hello></Hello>,
+      //       document.querySelector('.container')
+      //     );
+      //     console.log( "done" );
+      // });
+    </script>
+
   </head>
 
   <body>
     <%= yield %>
+    <%= javascript_include_tag 'bundle' %>
   </body>
 </html>
