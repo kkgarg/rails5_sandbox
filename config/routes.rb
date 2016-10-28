@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: :json}  do 
     match '/signin', to: 'session#create', via: :post
     match '/signup', to: 'registration#create', via: :post
-  end
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+    match '/users/dashboard', to: 'users#dashboard', via: :get end
+# For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
