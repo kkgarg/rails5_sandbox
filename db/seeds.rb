@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+u = User.first;
+list = List.create!(user_id: u.id, name: "List 1")
+
+(1..10).to_a.each do |i|
+  Task.create!(list_id: list.id, detail: Faker::Lorem.sentence)
+end
+
+
+
